@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 28pt;
+}
+
+img {
+  display: block;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  padding-left: 2rem;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  overflow: hidden;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+nav li a:hover {
+  background-color: black;
+}
+
+.jumbo {
+  background-image: url("../public/images/heros/hero-image_1.jpg");
+  background-color: rgb(59, 59, 59);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.jumboContent {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.restoran {
+  text-align: center;
+  padding: 2rem;
+}
+
+.kontenRestoran {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.cardRestoran {
+  border: 2px solid black;
+  width: 30rem;
+  text-align: justify;
+  transition: 0.1s;
+}
+
+.cardRestoran:hover{
+  box-shadow: 5px 6px #363636;
+}
+
+.cardRestoran a {
+  text-decoration: none;
+  color: black;
+}
+
+.cardRestoran img {
+  width: 30rem;
+  height: 20rem;
+}
+
+.kontenCard {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-bottom: 1rem;
+}
+
+footer {
+  background-color: rgb(20, 20, 20);
+  color: white;
+  text-align: center;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+  padding: 2rem;
+}
+
+#hamburger {
+  display: none;
+}
+
+.restoran h1 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.skip{
+  position: absolute;
+  top: -40rem;
+  background-color: #2b74af;
+  color: white;
+  padding: 0.8rem;
+  transition: 0.1s;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  z-index: 100;
+}
+
+.skip:focus {
+  top: 5rem;
+}
+
+.skip:hover {
+  background-color: #1b4568;
+  text-decoration: none;
+}
+
+.skip:active {
+  background-color: black;
+}
+
+@media screen and (max-width: 1200px) {
+
+  header {
+    justify-content: space-between;
+  }
+
+  .cardRestoran img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cardRestoran {
+    width: 60rem;
+  }
+
+  .cardRestoran:hover{
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  nav ul {
+    display: block;
+    background-color: rgb(41, 41, 41);
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    top: 4.25rem;
+    left: 0;
+    right: 0;
+  }
+
+  #hamburger {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20pt;
+    padding: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    border: none;
+    transition: 0.2s;
+    background-color: rgb(61, 61, 61);
+    order: 3;
+  }
+
+  #hamburger:active {
+    background-color: black;
+  }
+
+  .draw {
+    display: none;
+  }
+
+  .cardRestoran {
+    border: 0;
+    border-bottom: 2px dotted black;
+    width: 100%;
+  }
+
+  .restoran {
+    padding: 0;
+  }
+
+  .kontenRestoran {
+    padding: 0;
+  }
+}
